@@ -1,8 +1,8 @@
 .PHONY: all clean
 
-all: slides.html
+all: index.html
 
-%.html: %.md
+index.html: slides.md
 	pandoc $< -o $@ -t revealjs --standalone --template=template.html
 
 clean:
